@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+#main {
+    background-color: burlywood;
+  }
+  button{
+    background-color: rgb(36, 9, 61);
+    color: whitesmoke;
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';

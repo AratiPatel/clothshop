@@ -1,0 +1,24 @@
+<div style="width: 100%;">
+    <form #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+        <div>
+            <mat-form-field>
+                <mat-label>Email:</mat-label>
+                <input matInput placeholder="Email" type="email"  name="email" [(ngModel)]="loginForm.email">
+            </mat-form-field>
+          </div>
+        <div>
+            <mat-form-field>
+                <mat-label> Password:</mat-label>
+                <input matInput placeholder="Enter your password" name="password" type="password" [(ngModel)]="loginForm.password">
+
+            </mat-form-field>
+
+          </div>
+        <div>
+          <button mat-flat-button color="primary" type="submit">Submit</button>
+
+
+        </div>
+        <a [routerLink]="['/signup']">New user?Sign Up</a>
+    </form>
+</div>

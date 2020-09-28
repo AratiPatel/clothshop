@@ -1,0 +1,17 @@
+<h2>Products Details</h2>
+<mat-card>
+<div  *ngIf='product'>
+    <h3>{{product.name}}</h3>
+    <h4>{{product.price}}</h4>
+    <p>{{product.info}}</p>
+</div>
+
+<img src="{{product.image}}">
+<div class="btn-div">
+  <button mat-flat-button color="warn" (click)="addItems(product)">Buy</button>
+  &nbsp;
+  <button mat-flat-button  color="warn" (click)="adddata(product)">Add To Wishlist</button>
+  &nbsp;
+  <button mat-flat-button color="warn" [routerLink]="['/']">Back</button>
+</div>
+</mat-card>

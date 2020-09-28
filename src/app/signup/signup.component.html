@@ -1,0 +1,35 @@
+<div style="width: 100%;">
+    <form #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+        <p>
+            <mat-form-field>
+                <mat-label>Name:</mat-label>
+                <input matInput placeholder="name" type="text"  name="name" [(ngModel)]="signUpForm.name">
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field>
+                <mat-label>Email:</mat-label>
+                <input matInput placeholder="Email" type="email" name="email"
+                 [(ngModel)]="signUpForm.email"  required>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label> Password:</mat-label>
+                <input matInput placeholder="Enter your password" type="password"  name="password"
+                 [(ngModel)]='signUpForm.password'  required>
+
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field>
+                <mat-label>Confirm Password:</mat-label>
+                <input matInput placeholder="Enter your password" >
+
+            </mat-form-field>
+        </p>
+        <button mat-flat-button color="primary" type="submit">Submit</button>
+
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<mat-card>
+  <h3>Wishlist</h3>
+  <div fxLayout="row wrap" fxLayoutGap="50px">
+    <ng-container *ngFor="let item of wishitems; index as wishId">
+      <div
+        fxLayout="column"
+        fxFlex="100%"
+        fxFlex.gt-sm="25%"
+        fxFlex.gt-xs="33.33%"
+      >
+        <p>{{ item.name }}</p>
+        <p>{{ item.info }}</p>
+        <p>{{ item.price | currency }}</p>
+        <img src="{{ item.image }}" />
+      </div>
+    </ng-container>
+  </div>
+</mat-card>

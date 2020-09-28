@@ -1,0 +1,29 @@
+<div>
+  <mat-card>
+    <h3>Products</h3>
+    <div fxLayout="row wrap" fxLayoutGap="50px">
+      <ng-container *ngFor="let product of productList; index as productId">
+        <div
+          class="product-div"
+          fxLayout="column"
+          fxFlex="100%"
+          fxFlex.gt-sm="25%"
+          fxFlex.gt-xs="33.33%"
+        >
+          <h4>{{ product.name }}</h4>
+          <img src="{{ product.image }}" />
+          <p *ngIf="product.info">Info: {{ product.info }}</p>
+          <a
+            [title]="product.name + ' details'"
+            [routerLink]="['/productdetail', productId]"
+          >
+            {{ product.name }}
+          </a>
+          <button mat-flat-button color="warn" (click)="share()">Share</button>
+          <app-product-alert [productData]="product" (notify)="ongetinfo()">
+          </app-product-alert>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+</div>

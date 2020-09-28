@@ -1,0 +1,10 @@
+[
+    {
+        "time": "day",
+        "charge": 40
+    },
+    {
+        "time": "night",
+        "charge": 100
+    }
+]
